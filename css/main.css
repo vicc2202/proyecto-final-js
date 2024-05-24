@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Protest";
+    src: url(../fonts/Protest\ Demo.ttf);
+}
+@font-face {
+    font-family: "Almarai";
+    src: url(../fonts/Almarai-Regular.ttf);
+}
+
+body {
+    background-color: rgb(191,183,182);
+    font-family: "Almarai";
+}
+
+nav {
+    background-color: rgb(64, 38, 56);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    color: white;
+    padding-inline: 3rem;
+}
+
+.productos-nav {
+    text-decoration: none;
+    color: white;
+    font-family: "Almarai";
+    cursor: pointer;
+}
+ 
+.carrito-nav, .wishlist-nav {
+    color: white;
+}
+
+.button-carrito {
+    border: none;
+    background-color: rgb(64, 38, 56);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.inicio {
+    font-family: "Protest";
+    color: white;
+    font-size: 2rem;
+}
+
+.navegador {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.banner {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    color: rgb(64, 38, 56);
+}
+
+.texto-banner {
+    padding: 8rem;
+    background-image: radial-gradient(ellipse, rgb(168, 106, 185) 10%, rgb(174, 120, 201) 35%, rgb(191,183,182) 65%);
+}
+
+h1 {
+    font-family: "Protest";
+    font-size: 5rem;
+    text-align: center;
+}
+
+
+.h2-banner {
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.titulo-productos, .titulo-carrito, .titulo-wishlist {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+    color: rgb(57, 34, 50);
+    text-align: center;
+}
+
+.seccion-productos {
+    padding-inline: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.contenedor-producto {
+    padding: 1rem;
+    background-color: rgb(192, 246, 165);
+    background-image: linear-gradient(to bottom, rgb(160, 203, 139), rgb(192, 246, 165));
+    border-radius: 1rem;
+    transition: .6s;
+}
+
+.contenedor-producto:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 30px 10px rgb(53, 57, 51);
+}
+
+.contenedor-producto:hover > .texto-producto {
+    background-color: rgb(30,53,47);
+    color: white;
+}
+
+.imagen-producto {
+    max-width: 23rem;
+    border-radius: 1rem;
+}
+
+.texto-producto {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(140,216,103);
+    transition: .5s;
+    font-size: 1.3rem;
+}
+
+.descripcion-productos {
+    max-width: 21rem;
+}
+
+
+
+.precio {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.button-bag {
+    background-color: rgb(140,216,103);
+    border: none;
+    font-size: 1.5rem;
+    padding: .4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(320px,-50px);
+}
+
+.button-heart{
+    position: absolute;
+    border: none;
+    font-size: 2rem;
+    transform: translate(-40px, 10px);
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.button-heart-fill {
+    position: absolute;
+    border: none;
+    font-size: 2rem;
+    transform: translate(-40px, 10px);
+    background-color: transparent;
+    color: rgb(140,216,103);
+    cursor: pointer;
+    display: none;
+}
+
+.titulo-carrito {
+    margin-top: 4rem;
+}
+
+
+
+.texto-carrito, .texto-wishlist {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.lista-productos-en-carrito {
+    margin: 3rem;
+    margin-inline: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.producto-en-carrito {
+    background-color: rgb(30,53,47);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.imagen-producto-en-carrito {
+    max-width: 6rem;
+    border-radius: 1rem;
+}
+
+
+.producto-en-carrito-cantidad {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+.button-restar, .button-agregar, .button-eliminar {
+    cursor: pointer;
+    color: white;
+    background-color:  rgb(30,53,47);
+    font-size: 1.5rem;
+    border: none;
+}
+
+
+.button-acciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: 10rem;
+}
+
+.button-vaciar, .button-comprar {
+    border: none;
+    color: white;
+    background-color: rgb(30,53,47);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button-vaciar:hover {
+    background-color: rgb(140,216,103);
+    color: black;
+}
+
+
+.button-comprar:hover {
+    background-color: rgb(140,216,103);
+    color: black;
+}
+
+.total {
+    background-color: rgb(140,216,103);
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.compra-carrito {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.oculto {
+    display: none;
+}
+
+
+/* WISHLIST */
+.texto-wishlist-llena {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.lista-productos-en-wishlist {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-inline: 10rem;
+    margin-top: 3rem;
+}
+
+.producto-wishlist-secundario {
+    background-color: rgb(191,245,164);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+.producto-wishlist-central {
+    background-color: rgb(30,53,47);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 30px 10px rgb(53, 57, 51);
+    gap: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.descripcion-producto-wishlist{
+    font-size: 1.3rem;
+    max-width: 21rem;
+}
+
+.titulo-producto-wishlist {
+    font-size: 1.5rem;
+}
+
+.imagen-producto-en-wishlist {
+    max-width: 20rem;
+    border-radius: 1rem;
+}
+/* WISHLIST */
+
+
+footer {
+    margin-top: 6rem;
+    background-color: rgb(30,53,47);
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+

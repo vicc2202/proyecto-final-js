@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="inicio">Aura</h2>
+            <ul class="navegador">
+                <li><a class="productos-nav" href="#productos">Productos</a></li>
+                <li><a class="wishlist-nav" href="#wishlist"><i class="bi bi-heart-fill"></i></a></li>
+                <li><a class="carrito-nav" href="#carrito"><i class="bi bi-bag-heart-fill"></i></a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <div class="texto-banner">
+                <h1>Aura</h1>
+                <h2 class="h2-banner">Tu piel, tu esencia</h2>
+            </div>
+            <img src="./images/banner.png" alt="banner">
+        </div>
+    </header>
+    <main>
+        <h3 class="titulo-productos" id="productos">Productos</h3>
+        <section>
+            <div class="seccion-productos" id="seccion-productos">
+                
+            </div>
+        </section>
+        <section>
+            <h3 class="titulo-wishlist" id="wishlist">Wishlist</h3>
+            <p class="texto-wishlist" id="wishlist-vacia">Tu wishlist está vacía ¡Agregá los productos que te interese comprar mas adelante!</p>
+            <p class="texto-wishlist-llena" id="wishlist-llena">Estos son los productos que te interesaron</p>
+            <div class="lista-productos-en-wishlist">
+                <div class="producto-wishlist-secundario">
+                    <img class="imagen-producto-en-wishlist" src="./images/producto1.jpg" alt="producto">
+                    <p class="titulo-producto-wishlist">Contorno de ojos</p>
+                    <div class="descripcion-producto-wishlist">
+                        <p>Hidrata, reduce ojeras y líneas finas, dejando tu mirada fresca y rejuvenecida. Ideal para pieles sensibles.</p>
+                    </div>
+                </div>
+                <div class="producto-wishlist-central">
+                    <img class="imagen-producto-en-wishlist" src="./images/producto2.jpg" alt="producto">
+                    <p class="titulo-producto-wishlist">Crema Corporal</p>
+                    <div class="descripcion-producto-wishlist">
+                        <p>Nutre e hidrata profundamente, dejando tu piel suave, firme y radiante. Perfecta para todo tipo de piel.</p>
+                    </div>
+                </div>
+                <div class="producto-wishlist-secundario">
+                    <img class="imagen-producto-en-wishlist" src="./images/producto3.jpg" alt="producto">
+                    <p class="titulo-producto-wishlist">Spray Corporal</p>
+                    <div class="descripcion-producto-wishlist">
+                        <p>Refresca e hidrata al instante, dejando un aroma suave y duradero. Ideal para una piel revitalizada y perfumada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="carrito">
+            <h3 class="titulo-carrito" id="carrito">Carrito</h3>
+            <div id="carro-vacio">
+                <p class="texto-carrito">Tu carrito esta vacío ¡Agregá nuestros productos!</p>
+            </div>
+            <div class="lista-productos-en-carrito oculto" id="lista-productos-en-carrito">
+                <div class="producto-en-carrito">
+                    <img class="imagen-producto-en-carrito" src="./images/producto1.jpg" alt="producto">
+                    <p>Contorno de ojos</p>
+                    <p>$1500</p>
+                    <div class="producto-en-carrito-cantidad">
+                        <button class="button-restar"><i class="bi bi-dash-circle"></i></button>
+                        <p>1</p>
+                        <button class="button-agregar"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                    <button class="button-eliminar"><i class="bi bi-trash3-fill"></i></button>
+                </div>
+                <div class="producto-en-carrito">
+                    <img class="imagen-producto-en-carrito" src="./images/producto2.jpg" alt="producto">
+                    <p>Crema Corporal</p>
+                    <p>$2000</p>
+                    <div class="producto-en-carrito-cantidad">
+                        <button class="button-restar"><i class="bi bi-dash-circle"></i></button>
+                        <p>1</p>
+                        <button class="button-agregar"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                    <button class="button-eliminar"><i class="bi bi-trash3-fill"></i></button>
+                </div>
+                <div class="producto-en-carrito">
+                    <img class="imagen-producto-en-carrito" src="./images/producto3.jpg" alt="producto">
+                    <p>Spray Corporal</p>
+                    <p>$2500</p>
+                    <div class="producto-en-carrito-cantidad">
+                        <button class="button-restar"><i class="bi bi-dash-circle"></i></button>
+                        <p>1</p>
+                        <button class="button-agregar"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                    <button class="button-eliminar"><i class="bi bi-trash3-fill"></i></button>
+                </div>
+            </div>
+            <div class="button-acciones">
+                <div>
+                    <button class="button-vaciar" id="button-vaciar">Vaciar</button>
+                </div>
+                <div class="compra-carrito" id="compra-carrito" >
+                    <p class="total" id="total" >Total: $0</p>
+                    <button class="button-comprar" id="button-comprar">Comprar</button>
+                </div>
+            </div>
+            <div class="compra-realizada" id="compra-realizada">
+                <p class="texto-carrito">¡Felicidades por realizar tu compra!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h4>Contacto</h4>
+            <p>Correo electrónico: contacto@auraskincare.com</p>
+            <p>Teléfono: +34 123 456 789</p>
+        </div>
+        <div>
+            <h4>Atención al Cliente</h4>
+            <p>Preguntas Frecuentes</p>
+            <p>Políticas de Envío y Devoluciones</p>
+            <p>Términos y Condiciones</p>
+            <p>Privacidad y Seguridad</p>
+        </div>
+        <h5>Todos los derechos reservados © 2024 Aura Skincare</h5>
+    </footer>
+    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
